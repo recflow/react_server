@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.REACT_APP_PORT || 4000;
 
-const db = require('../config/db');
+const db = require('./config/db');
 
 app.get('/', (req, res) => {
     res.send('Server Response Success');
