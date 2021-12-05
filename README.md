@@ -1,5 +1,5 @@
-## 이 프로젝트를 사용하기 위해서는 
-
+## 리액트에 서버 추가하기    
+#### 이 프로젝트를 사용하기 위해서는 
 + /server/config 폴더에 아래와 같은 config.json을 추가해야합니다.   
 ```json
 {
@@ -11,16 +11,21 @@
     "DATABASE": "AWS_RDS_DB_식별자"
   }
 }
-```
-+ 이 방법을 사용한 이유   
-: .env 파일을 인식하지 못함.. 이유가 뭘까?
+```  
 
+>- 이 방법을 사용한 이유   
+>  .env 의 변수를 server에서 불러오지 못함. 이유가 뭘까?  
+>  시도한 것들  
+>    :REACT_APP_변수명, process.env, env.development...  
+>  src 폴더 내에선 여전히 불러오기 가능.
+#
 + 추가 해야할 것   
-[X] node server.js 명령 없이 서버도 바로 실행되도록 할 것.
-
-* 추가한 모듈   
+  - [X] node server.js 명령 없이 서버도 바로 실행되도록 할 것.  
+#
++ 추가한 모듈   
   - express: 서버 모듈 / http 모듈보다 더 많은 기능이 있다. 
   - mysql: 데이터베이스 모듈
   - axios: HTTP request 모듈
   - npm-run-all: 서버와 화면 소스를 동시에 실행시키는 모듈
   - nodemon: server가 변경되면 바로바로 적용되도록 하는 모듈
+  
